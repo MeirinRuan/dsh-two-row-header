@@ -1,0 +1,60 @@
+{
+  "name": "dsh-two-row-header",
+  "version": "0.1.1",
+  "type": "module",
+  "license": "MIT",
+  "author": "MeirinRuan",
+  "description": "Place native conversation actions and utilities on separate header rows. Controls retain their original order and behavior and can wrap further when space is limited.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeirinRuan/dsh-two-row-header.git"
+  },
+  "homepage": "https://github.com/MeirinRuan/dsh-two-row-header#readme",
+  "bugs": {
+    "url": "https://github.com/MeirinRuan/dsh-two-row-header/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "ui"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": "0.2.2-rc.1"
+  },
+  "packageManager": "pnpm@11.28.5",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client-v2.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client-v2.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "docs/*.md"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client-v2.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

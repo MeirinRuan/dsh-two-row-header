@@ -1,0 +1,7 @@
+url: https://github.com/MeirinRuan/dsh-two-row-header
+name: MeirinRuan/dsh-two-row-header
+category: ui
+description:
+  en: Place native conversation actions and utilities on separate header rows.
+  zh: 将原生会话操作和工具分到顶栏的不同行，保留控件原有顺序与行为，空间不足时可以继续换行。
+tarball: https://github.com/MeirinRuan/dsh-two-row-header/releases/latest/download/dsh-two-row-header.tgz
